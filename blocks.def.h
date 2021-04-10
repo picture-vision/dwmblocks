@@ -1,7 +1,7 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
-	{" ",	"pamixer --get-volume",																	 															 0,		10},
+	{"  ",	"pamixer --get-volume",																	 															 0,		10},
 	{" ",	"sensors | awk '/^Package/ { print $4 }' | sed s/+//g",																 5,		 0},
 	{" ",	"iwconfig wlp2s0 | awk '/ESSID/ {split($4,a,\":\"); print a[2]}' | sed s/\\\"//g",		10,		 0},
 	{" ", 	"acpi | awk '/^Battery/ { print $4}' | sed s/,//g", 																	30, 	 0},
