@@ -7,7 +7,7 @@ static const Block blocks[] = {
 	{"ﯦ ", 	"xbacklight | awk '{split($0,a,\".\"); {  print a[1] \"%\"}}'",     0, 	    20},
 	{"  ", 	"free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",			10,		 0},
 //	{" ",	"nmcli c | awk '/wifi/ {print $1}'",		 	                    10,		 0},
-	{" ",	"iwctl station wlp0s20f3 show | awk '/network/ {print $3}'",		 	10,		 0},
+	{" ",	"iwctl station wlan0 show | awk '/network/ {print $3}'",		 	10,		 0},
 //	{"  ", 	"date '+%b %d (%a) %I:%M%p ' ",									5,		 0},
 	{"  ", 	"date '+%d.%b %H:%M ' ",									5,		 0},
 };
