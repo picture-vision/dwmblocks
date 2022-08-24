@@ -2,7 +2,7 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"  ",	"sensors | awk '/^Package/ { print $4 }' | sed s/+//g",             5,		 0},
-	{"  ", 	"acpi | awk '/^Battery/ { print $4}' | sed s/,//g",             30, 	 0},
+	{"  ", 	"acpi | awk '/^Battery 0/ { print $4}' | sed s/,//g",             30, 	 0},
 	{" ",	"echo $(pulsemixer --get-volume | awk '{ print $1}')%",                                       0,		10},
 	{"ﯦ ", 	"echo $(xbacklight -get)%",     0, 	    20},
 	{"  ", 	"free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",			10,		 0},
