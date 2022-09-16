@@ -4,7 +4,7 @@ static const Block blocks[] = {
 	{"  ",	"sensors | awk '/^Package/ { print $4 }' | sed s/+//g",             5,		 0},
 	{"  ", 	"acpi | awk '/^Battery 0/ { print $4}' | sed s/,//g",             30, 	 0},
 	{" ",	"echo $(pulsemixer --get-volume | awk '{ print $1}')%",                                       0,		10},
-	{"ﯦ ", 	"echo $(xbacklight -get)%",     0, 	    20},
+  {"ﯦ ", 	"echo $(echo $(brightnessctl g)00/$(brightnessctl m) | bc)%",     0, 	    20},
 	{"  ", 	"free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",			10,		 0},
 //	{" ",	"nmcli c | awk '/wifi/ {print $1}'",		 	                    10,		 0},
 	{" ",	"iwctl station wlan0 show | awk '/network/ {print $3}'",		 	10,		 0},
