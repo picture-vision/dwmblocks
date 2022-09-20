@@ -1,7 +1,7 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
-	{"^b#3b4252^^c#d65d0e^   ",	"sensors | awk '/^Package/ { print $4 }' | sed s/+//g",             5,		 0},
+	{"^b#3b4252^^c#d65d0e^  ",	"sensors | awk '/^Package/ { print $4 }' | sed s/+//g",             5,		 0},
 	{"^b#3b4252^^c#d79921^  ", 	"acpi | awk '/^Battery 0/ { print $4}' | sed s/,//g",             30, 	 0},
 	{"^b#3b4252^^c#98971a^ ",	"echo $(pulsemixer --get-volume | awk '{ print $1}')%",                                       0,		10},
   {"^b#3b4252^^c#d5c4a1^ﯦ ", 	"echo $(echo $(brightnessctl g)00/$(brightnessctl m) | bc)%",     0, 	    20},
