@@ -1,0 +1,4 @@
+#!/bin/bash
+
+[[ -d /sys/class/net/tun0 ]] && ip a | awk '/ tun0/' | awk '/ inet/ { print $2 }' || echo -
+
